@@ -1,0 +1,96 @@
+@import url(https://db.onlinewebfonts.com/c/596409e7700d7e9cd94f9df5a8b1b477?family=CircularSpUIv3T-Black);
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "CircularSpUIv3T-Black";
+    box-sizing: border-box;
+    color:#fff;
+    padding-bottom: 90px;
+    background-color:#1D1D1D;
+}
+
+.form-wrapper{
+    padding-top: 60px;
+    width:30%;
+    margin: auto;
+    text-align: center;
+}
+.form-wrapper h1{
+    font-size: 28px;
+    text-transform: capitalize;
+}
+
+.form-wrapper button{
+    width: 100%;
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    background-color:#0f2450;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.form-wrapper button:hover{
+    background-color:#234794;
+}
+.form-wrapper button i{
+    margin-right: 8px;
+}
+.divider{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #fff; */
+}
+.divider div{
+    background-color: rgb(149, 233, 13);
+    height: 1px;
+    width: 100%;
+    margin: 14px;
+    margin-top: 30px;
+}
+form{
+    padding: 18px;
+    text-align: left;
+}
+form label{
+    display: block;
+    font-size: 20px;
+}
+form input{
+    width: 100%;
+    padding: 8px 18px;
+    border: 2px solid rgb(149, 233, 13);
+    border-radius: 12px;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.form-wrapper .sign-up-btn{
+    width:100% ;
+    color: white;
+    background-color: #252525 !important;
+    border: 2px solid white;
+}
+
+.form-wrapper .sign-up-btn:hover{
+    background-color: white !important;
+    color: black;
+}
+
+@media (max-width:1400px){
+    .form-wrapper{
+        padding-top: 60px;
+        width:80%;
+        margin: auto;
+        text-align: center;
+    }
+}
