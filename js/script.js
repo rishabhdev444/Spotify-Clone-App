@@ -1,5 +1,5 @@
 
-let currentSong=new Audio();
+let currentSong=new Audio("/songs/");
 let songs;
 let currFolder;
 
@@ -83,11 +83,10 @@ async function displayAlbums() {
     let cardContainer = document.querySelector(".cardContainer")
     let array = Array.from(anchors)
     
-    for (let index = 0; index < array.length; index++) {
+    for (let index = 0; index <array.length; index++) {
         const e = array[index];
         if (e.href.includes("/songs/") && !e.href.includes(".htaccess")) {
-            let folder = e.href.split("/").slice(-2)[1]
-            console.log(folder)
+            let folder = e.href.split("/").slice(-2)[0]
             // Get the metadata of the folder
             let a = await fetch(`/songs/${folder}/info.json`)
             let response = await a.json(); 
@@ -120,7 +119,7 @@ async function displayAlbums() {
 
 async function main(){
     
-    songs=await getSongs("songs/rap");
+    songs=await getSongs("songs/Rap");
     playMusic(songs[0],true);
 
     // Display all the albums on the page
