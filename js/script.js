@@ -1,5 +1,5 @@
 
-let currentSong=new Audio("./songs/");
+let currentSong=new Audio("/songs/");
 let songs;
 let currFolder;
 
@@ -87,6 +87,7 @@ async function displayAlbums() {
         const e = array[index];
         if (e.href.includes("/songs/") && !e.href.includes(".htaccess")) {
             let folder = e.href.split("/").slice(-2)[1]
+            console.log(folder)
             // Get the metadata of the folder
             let a = await fetch(`/songs/${folder}/info.json`)
             let response = await a.json(); 
